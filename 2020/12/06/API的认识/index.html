@@ -6,12 +6,12 @@
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>标签 - Hexo</title>
+  <title> - Hexo</title>
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="google" content="notranslate" />
   
-  
+  <meta name="description" content="FindWindow（） 取窗口句柄函数功能：该函数获...">
   <meta name="author" content="John Doe">
   <link rel="icon" href="/images/icons/favicon-16x16.png" type="image/png" sizes="16x16">
   <link rel="icon" href="/images/icons/favicon-32x32.png" type="image/png" sizes="32x32">
@@ -126,24 +126,6 @@
   
 
 
-  <nav class="navbar">
-    <div class="left">
-      
-        <i class="iconfont iconqrcode j-navbar-qrcode"></i>
-      
-      
-        <i class="iconfont iconmoono" id="color-toggle" color-toggle="light"></i>
-      
-    </div>
-    <div class="center">标签</div>
-    <div class="right">
-      <i class="iconfont iconmenu j-navbar-menu"></i>
-    </div>
-    
-      <div id="qrcode-navbar"></div>
-    
-  </nav>
-
   
 
 <nav class="menu">
@@ -156,7 +138,7 @@
       </li><li class="menu-item">
         <a href="/archives/ " class="underline "> 归档</a>
       </li><li class="menu-item">
-        <a href="/tags/ " class="underline active"> 标签</a>
+        <a href="/tags/ " class="underline "> 标签</a>
       </li><li class="menu-item">
         <a href="/categories/ " class="underline "> 分类</a>
       </li><li class="menu-item">
@@ -168,15 +150,105 @@
   </div>
 </nav>
   <main id="main">
-  <section class="tags">
-    <header class="header">
-  <h1 class="header-title">标签</h1>
-  <p class="header-subtitle">共: 0 个</p>
-</header>
-    <div class="tags-container">
+  <div class="article-wrap">
+    <div class="row container">
+      <div class="col-xl-3"></div>
+      <div class="col-xl-6"><article class="article">
+  <div class="wrap">
+    <section class="head">
+  <img   class="lazyload" data-original="/images/theme/post-image.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  draggable="false">
+  <div class="head-mask">
+    <h1 class="head-title"></h1>
+    <div class="head-info">
+      <span class="post-info-item"><i class="iconfont iconcalendar"></i>December 06, 2020</span>
       
+      <span class="post-info-item"><i class="iconfont iconfont-size"></i>615</span>
     </div>
-  </section>
+  </div>
+</section>
+    <section class="main">
+      <section class="content">
+        <h1 id="FindWindow（）-取窗口句柄"><a href="#FindWindow（）-取窗口句柄" class="headerlink" title="FindWindow（） 取窗口句柄"></a>FindWindow（） 取窗口句柄</h1><p>函数功能：该函数获得一个顶层窗口的句柄，该窗口的类名和窗口名与给定的字符串相匹配。这个函数不查找子窗口。在查找时不区分大小写。<br>![[Pasted image 20201206064717.png]]<br>![[Pasted image 20201206064758.png]]<br>    函数型：HWND FindWindow（LPCTSTR IpClassName，LPCTSTR IpWindowName）;</p>
+<pre><code>参数：
+
+IpClassName ：指向一个指定了类名的空结束字符串，或一个标识类名字符串的成员的指针。如果该参数为一个成员，则它必须为前次调用theGlobafAddAtom函数产生的全局成员。该成员为16位，必须位于IpClassName的低 16位，高位必须为 0。
+
+IpWindowName：指向一个指定了窗口名（窗口标题）的空结束字符串。如果该参数为空，则为所有窗口全匹配。
+
+返回值：如果函数成功，返回值为具有指定类名和窗口名的窗口句柄；如果函数失败，返回值为NULL。</code></pre>
+<h1 id="GetWindowRect（）-获得窗口坐标"><a href="#GetWindowRect（）-获得窗口坐标" class="headerlink" title="GetWindowRect（） 获得窗口坐标"></a>GetWindowRect（） 获得窗口坐标</h1><p>GetWindowRect是一个Windows API函数。该函数返回指定窗口的边框矩形的大小，函数原型为void GetWindowRect(LPRECT lpRect) const。<br>![[Pasted image 20201206065024.png]]</p>
+
+      </section>
+      <section class="extra">
+        
+        
+          <section class="donate">
+  <div id="qrcode-donate">
+    <img   class="lazyload" data-original="https://pic.izhaoo.com/alipay.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==" >
+  </div>
+  <div class="icon">
+    <a href="javascript:;" id="alipay"><i class="iconfont iconalipay"></i></a>
+    <a href="javascript:;" id="wechat"><i class="iconfont iconwechat-fill"></i></a>
+  </div>
+</section>
+        
+        
+        
+  <nav class="nav">
+    <a href="/2020/12/17/hello-world/"><i class="iconfont iconleft"></i>Hello World</a>
+    <a href="/2020/12/01/03%20%E7%BA%BF%E7%A8%8B%E4%BA%86%E8%A7%A3%E3%80%81%E6%96%87%E4%BB%B6%E7%9B%B8%E5%85%B3/"><i class="iconfont iconright"></i></a>
+  </nav>
+
+      </section>
+      
+        <section class="comments">
+  
+    <div class="btn" id="comments-btn">查看评论</div>
+  
+  
+<div id="valine"></div>
+<script defer src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<script>
+  window.onload = function () {
+    var loadValine = function () {
+      new Valine({
+        el: '#valine',
+        app_id: "iWPcfJrPm1marm8E7a8nTuJn-gzGzoHsz",
+        app_key: "fi7uJDFtdvhOfQpsP2tbttwf",
+        placeholder: "雁过留痕",
+        avatar: "mp",
+        pageSize: "10",
+        lang: "zh-CN",
+      });
+    }
+    if ( true ) {
+      $("#comments-btn").on("click", function () {
+        $(this).hide();
+        loadValine();
+      });
+    } else {
+      loadValine();
+    }
+  };
+</script>
+
+</section>
+      
+    </section>
+  </div>
+</article></div>
+      <div class="col-xl-3">
+        
+          
+  <aside class="toc-wrap">
+    <h3 class="toc-title">文章目录：</h3>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#FindWindow%EF%BC%88%EF%BC%89-%E5%8F%96%E7%AA%97%E5%8F%A3%E5%8F%A5%E6%9F%84"><span class="toc-text">FindWindow（） 取窗口句柄</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#GetWindowRect%EF%BC%88%EF%BC%89-%E8%8E%B7%E5%BE%97%E7%AA%97%E5%8F%A3%E5%9D%90%E6%A0%87"><span class="toc-text">GetWindowRect（） 获得窗口坐标</span></a></li></ol>
+  </aside>
+
+        
+      </div>
+    </div>
+  </div>
 </main>
   
 

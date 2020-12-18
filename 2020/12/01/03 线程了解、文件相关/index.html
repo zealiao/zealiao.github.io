@@ -6,12 +6,12 @@
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>标签 - Hexo</title>
+  <title> - Hexo</title>
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="google" content="notranslate" />
   
-  
+  <meta name="description" content="线程一个程序运行只有一个==进程==，但是可以有多个=...">
   <meta name="author" content="John Doe">
   <link rel="icon" href="/images/icons/favicon-16x16.png" type="image/png" sizes="16x16">
   <link rel="icon" href="/images/icons/favicon-32x32.png" type="image/png" sizes="32x32">
@@ -126,24 +126,6 @@
   
 
 
-  <nav class="navbar">
-    <div class="left">
-      
-        <i class="iconfont iconqrcode j-navbar-qrcode"></i>
-      
-      
-        <i class="iconfont iconmoono" id="color-toggle" color-toggle="light"></i>
-      
-    </div>
-    <div class="center">标签</div>
-    <div class="right">
-      <i class="iconfont iconmenu j-navbar-menu"></i>
-    </div>
-    
-      <div id="qrcode-navbar"></div>
-    
-  </nav>
-
   
 
 <nav class="menu">
@@ -156,7 +138,7 @@
       </li><li class="menu-item">
         <a href="/archives/ " class="underline "> 归档</a>
       </li><li class="menu-item">
-        <a href="/tags/ " class="underline active"> 标签</a>
+        <a href="/tags/ " class="underline "> 标签</a>
       </li><li class="menu-item">
         <a href="/categories/ " class="underline "> 分类</a>
       </li><li class="menu-item">
@@ -168,15 +150,103 @@
   </div>
 </nav>
   <main id="main">
-  <section class="tags">
-    <header class="header">
-  <h1 class="header-title">标签</h1>
-  <p class="header-subtitle">共: 0 个</p>
-</header>
-    <div class="tags-container">
+  <div class="article-wrap">
+    <div class="row container">
+      <div class="col-xl-3"></div>
+      <div class="col-xl-6"><article class="article">
+  <div class="wrap">
+    <section class="head">
+  <img   class="lazyload" data-original="/images/theme/post-image.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  draggable="false">
+  <div class="head-mask">
+    <h1 class="head-title"></h1>
+    <div class="head-info">
+      <span class="post-info-item"><i class="iconfont iconcalendar"></i>December 01, 2020</span>
       
+      <span class="post-info-item"><i class="iconfont iconfont-size"></i>260</span>
     </div>
-  </section>
+  </div>
+</section>
+    <section class="main">
+      <section class="content">
+        <h1 id="线程"><a href="#线程" class="headerlink" title="线程"></a>线程</h1><p>一个程序运行只有一个==进程==，但是可以有多个==线程</p>
+<p>多线程支持库-启动线程</p>
+<p>启动线程，则运行对应的子程序<br>![[Pasted image 20201201224356.png]]</p>
+<h1 id="子程序参数与返回值"><a href="#子程序参数与返回值" class="headerlink" title="子程序参数与返回值"></a>子程序参数与返回值</h1><p>模块引用，导入<br>![[Pasted image 20201201224541.png]]</p>
+<p>使用方式：模块名.方法</p>
+<p>设置子程序参数<br>![[Pasted image 20201201225706.png]]</p>
+<h1 id="文件的读写以及操作目录"><a href="#文件的读写以及操作目录" class="headerlink" title="文件的读写以及操作目录"></a>文件的读写以及操作目录</h1><p>写到文件：<br>![[Pasted image 20201201230540.png]]</p>
+<h1 id="读取文件"><a href="#读取文件" class="headerlink" title="读取文件"></a>读取文件</h1>
+      </section>
+      <section class="extra">
+        
+        
+          <section class="donate">
+  <div id="qrcode-donate">
+    <img   class="lazyload" data-original="https://pic.izhaoo.com/alipay.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==" >
+  </div>
+  <div class="icon">
+    <a href="javascript:;" id="alipay"><i class="iconfont iconalipay"></i></a>
+    <a href="javascript:;" id="wechat"><i class="iconfont iconwechat-fill"></i></a>
+  </div>
+</section>
+        
+        
+        
+  <nav class="nav">
+    <a href="/2020/12/06/API%E7%9A%84%E8%AE%A4%E8%AF%86/"><i class="iconfont iconleft"></i></a>
+    <a href="/2020/12/01/02%20%E7%AC%AC%E4%BA%8C%E7%AB%A0%20%E6%98%93%E8%AF%AD%E8%A8%80%E7%BB%84%E4%BB%B6/"><i class="iconfont iconright"></i></a>
+  </nav>
+
+      </section>
+      
+        <section class="comments">
+  
+    <div class="btn" id="comments-btn">查看评论</div>
+  
+  
+<div id="valine"></div>
+<script defer src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<script>
+  window.onload = function () {
+    var loadValine = function () {
+      new Valine({
+        el: '#valine',
+        app_id: "iWPcfJrPm1marm8E7a8nTuJn-gzGzoHsz",
+        app_key: "fi7uJDFtdvhOfQpsP2tbttwf",
+        placeholder: "雁过留痕",
+        avatar: "mp",
+        pageSize: "10",
+        lang: "zh-CN",
+      });
+    }
+    if ( true ) {
+      $("#comments-btn").on("click", function () {
+        $(this).hide();
+        loadValine();
+      });
+    } else {
+      loadValine();
+    }
+  };
+</script>
+
+</section>
+      
+    </section>
+  </div>
+</article></div>
+      <div class="col-xl-3">
+        
+          
+  <aside class="toc-wrap">
+    <h3 class="toc-title">文章目录：</h3>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%BA%BF%E7%A8%8B"><span class="toc-text">线程</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AD%90%E7%A8%8B%E5%BA%8F%E5%8F%82%E6%95%B0%E4%B8%8E%E8%BF%94%E5%9B%9E%E5%80%BC"><span class="toc-text">子程序参数与返回值</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%96%87%E4%BB%B6%E7%9A%84%E8%AF%BB%E5%86%99%E4%BB%A5%E5%8F%8A%E6%93%8D%E4%BD%9C%E7%9B%AE%E5%BD%95"><span class="toc-text">文件的读写以及操作目录</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%AF%BB%E5%8F%96%E6%96%87%E4%BB%B6"><span class="toc-text">读取文件</span></a></li></ol>
+  </aside>
+
+        
+      </div>
+    </div>
+  </div>
 </main>
   
 
