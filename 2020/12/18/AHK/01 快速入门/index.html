@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"zealiao.github.io","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="第一个脚本123^j::Send, Hello!Return  ^j  代表按键CTRL+JSend 是命令，Hello！ 是要发送的内容Return 表示停止代码继续执行 快捷键&amp;热字串热键就是触发动作的按键，如： &#x3D;&#x3D;^J::&#x3D;&#x3D;热字串就自动执行替换文本或执行程序的缩写内容，如： &#x3D;&#x3D;::sfz1::&#x3D;&#x3D;区别在于热字串会在输入完就立马替换和执行 热键的创建必须把组合按键在两个冒号的左边">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Zeal Bill">
+<meta property="og:url" content="https://zealiao.github.io/2020/12/18/AHK/01%20%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/index.html">
+<meta property="og:site_name" content="Zeal Bill">
+<meta property="og:description" content="第一个脚本123^j::Send, Hello!Return  ^j  代表按键CTRL+JSend 是命令，Hello！ 是要发送的内容Return 表示停止代码继续执行 快捷键&amp;热字串热键就是触发动作的按键，如： &#x3D;&#x3D;^J::&#x3D;&#x3D;热字串就自动执行替换文本或执行程序的缩写内容，如： &#x3D;&#x3D;::sfz1::&#x3D;&#x3D;区别在于热字串会在输入完就立马替换和执行 热键的创建必须把组合按键在两个冒号的左边">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-12-18T06:45:23.056Z">
+<meta property="article:modified_time" content="2020-12-12T07:22:02.245Z">
+<meta property="article:author" content="Zeal Bill">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="https://zealiao.github.io/2020/12/18/AHK/01%20%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title> | Zeal Bill</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Zeal Bill</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">时间是星星的眼睛，望穿我的困惑。</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-首页">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-标签">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-归档">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+        <li class="menu-item menu-item-关于">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://zealiao.github.io/2020/12/18/AHK/01%20%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Zeal Bill">
+      <meta itemprop="description" content="时间是星星的眼睛，望穿我的困惑。">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Zeal Bill">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-12-18 14:45:23" itemprop="dateCreated datePublished" datetime="2020-12-18T14:45:23+08:00">2020-12-18</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-12-12 15:22:02" itemprop="dateModified" datetime="2020-12-12T15:22:02+08:00">2020-12-12</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="第一个脚本"><a href="#第一个脚本" class="headerlink" title="第一个脚本"></a>第一个脚本</h1><figure class="highlight autohotkey"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs autohotkey"><span class="hljs-title">^j::</span><br><span class="hljs-built_in">Send,</span> Hello!<br><span class="hljs-keyword">Return</span><br></code></pre></td></tr></table></figure>
+
+<p>^j  代表按键CTRL+J<br>Send 是命令，Hello！ 是要发送的内容<br>Return 表示停止代码继续执行</p>
+<h1 id="快捷键-amp-热字串"><a href="#快捷键-amp-热字串" class="headerlink" title="快捷键&amp;热字串"></a>快捷键&amp;热字串</h1><p>热键就是触发动作的按键，如： ==^J::==<br>热字串就自动执行替换文本或执行程序的缩写内容，如： ==::sfz1::==<br>区别在于热字串会在输入完就立马替换和执行</p>
+<p>热键的创建必须把组合按键在两个冒号的左边，且以return结束<br>热键和热字串都能启动程序和执行脚本</p>
+<figure class="highlight autohotkey"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs autohotkey"><span class="hljs-title">^j::</span><br>MsgBox Wow!<br>MsgBox this is<br><span class="hljs-built_in">Run,</span> Notepad.exe<br><span class="hljs-built_in">Winactivate,</span> Untitled - Notepad  <span class="hljs-comment">; 无标题 - 记事本</span><br><span class="hljs-built_in">WinWaitActive,</span> Untitled - Notepad  <span class="hljs-comment">; 无标题 - 记事本</span><br><span class="hljs-built_in">Send,</span> <span class="hljs-number">7</span> lines&#123;!&#125;&#123;enter&#125;<br><span class="hljs-built_in">SendInput,</span> inside the ctrl&#123;+&#125;j hotkey<br><span class="hljs-keyword">Return</span><br></code></pre></td></tr></table></figure>
+<h2 id="特殊键和符号"><a href="#特殊键和符号" class="headerlink" title="特殊键和符号"></a>特殊键和符号</h2><p>![[Pasted image 20201212130720.png]]</p>
+<p><strong>&amp;</strong> 用于连接两个按键(含鼠标按键) 合并成一个自定义热键.</p>
+<figure class="highlight autoit"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs autoit">Numpad0 &amp; Numpad1::<br><span class="hljs-built_in">MsgBox</span> You pressed Numpad1 <span class="hljs-keyword">while</span> holding down Numpad0.<br><span class="hljs-keyword">Return</span><br><br>Numpad0 &amp; Numpad2::<br><span class="hljs-built_in">Run</span> Notepad<br><span class="hljs-keyword">Return</span><br></code></pre></td></tr></table></figure>
+<h2 id="窗口特定的热键-热字串"><a href="#窗口特定的热键-热字串" class="headerlink" title="窗口特定的热键/热字串"></a>窗口特定的热键/热字串</h2><p>有时候你也许想要热键或热字串只在某些特定窗口上工作(或禁用). 要做到这一点, 您需要使用其中的任意一个”高级”命令, 在它们前面带有一个 <code>#:</code></p>
+<figure class="highlight vala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs vala"><span class="hljs-meta">#IfWinActive</span><br><span class="hljs-meta">#IfWinExist</span><br></code></pre></td></tr></table></figure>
+<p><code>IfWinActive</code>后面接窗口标题，指定脚本在特定窗口下生效，如不指定，则对所有窗口生效，且与位置有关，它们将影响脚本中的位于他们之间所有热键和热字串. 它们也相互排斥的; 也就是说, 只有最近的一个会有效.</p>
+<p>多个热键和热字串都能放在一个脚本里</p>
+<h2 id="发送按键"><a href="#发送按键" class="headerlink" title="发送按键"></a>发送按键</h2><p>使用<code>Send</code>命令<br>![[Pasted image 20201212135656.png]]<br>![[Pasted image 20201212135703.png]]<br>![[Pasted image 20201212135711.png]]<br>![[Pasted image 20201212135720.png]]<br>![[Pasted image 20201212135804.png]]</p>
+<p>想要表示按住或松开某个按键, 可以将这个键用花括号围起来, 同时加上单词 UP 或 DOWN. 例如:<br>![[Pasted image 20201212140003.png]]</p>
+<h1 id="打开程序-amp-网页"><a href="#打开程序-amp-网页" class="headerlink" title="打开程序&amp;网页"></a>打开程序&amp;网页</h1><p>使用<code>Run</code>命令<br>![[Pasted image 20201212141147.png]]</p>
+<h1 id="命令和函数"><a href="#命令和函数" class="headerlink" title="命令和函数"></a>命令和函数</h1><h2 id="命令"><a href="#命令" class="headerlink" title="命令"></a>命令</h2><pre><code>Command, 参数1, 参数2, 参数3</code></pre>
+<p>命令后面直接跟参数，而函数需要使用圆括号再接参数<br>![[Pasted image 20201212141351.png]]</p>
+<ol>
+<li>参数前后要加%，文本和数字则不需要</li>
+<li>命令的参数不能进行运算</li>
+</ol>
+<h2 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h2><pre><code>Function(参数1, 参数2, 参数3)</code></pre>
+<p>![[Pasted image 20201212141652.png]]</p>
+<p>函数通常会返回一个值, 这一点与命令也不一样. 命令需要设置 OutputVar 参数来保存结果, 而函数不需要. </p>
+<p>函数赋值给变量用 <code>=</code> 符号</p>
+<pre><code>MyVar := SubStr(&quot;I&#39;m scripting, awesome!&quot;, 16)</code></pre>
+<h2 id="代码块"><a href="#代码块" class="headerlink" title="代码块"></a>代码块</h2><p>如果不使用花括号, 整块代码中只有第一行代码能被执行.<br>![[Pasted image 20201212142019.png]]</p>
+<h1 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h1><p>有时候你想让用户来选择某些值. 这可以有很多种方法, 但其中最简单的办法就是使用 InputBox 命令<br>![[Pasted image 20201212142930.png]]<br>下面的例子展示了什么时候该使用百分号, 什么时候不该.<br>![[Pasted image 20201212142955.png]]</p>
+<h1 id="对象"><a href="#对象" class="headerlink" title="对象"></a>对象</h1><p>对象是一种组织数据以实现更高效使用的方法. 有时候对象被当作数组<br>对象基本上是变量的集合. 变量的名称叫做”键”, 变量的内容叫做”值”.<br>![[Pasted image 20201212143137.png]]<br>列表创建：用方括号</p>
+<pre><code>MyObject := [&quot;one&quot;, &quot;two&quot;, &quot;three&quot;, 17]</code></pre>
+<p>字典创建：用花括号</p>
+<pre><code>Banana := &#123;&quot;Color&quot;: &quot;Yellow&quot;, &quot;Taste&quot;: &quot;Delicious&quot;, &quot;Price&quot;: 3&#125;</code></pre>
+<p>数组函数创建：用圆括号 Array函数名</p>
+<pre><code>MyObject := Array(&quot;one&quot;, &quot;two&quot;, &quot;three&quot;, 17)</code></pre>
+<p>对象函数创建：用圆括号 Object函数名</p>
+<pre><code>Banana := Object(&quot;Color&quot;, &quot;Yellow&quot;, &quot;Taste&quot;, &quot;Delicious&quot;, &quot;Price&quot;, 3)</code></pre>
+<p>操作对象</p>
+<p>设置值<br>![[Pasted image 20201212143707.png]]<br>![[Pasted image 20201212143716.png]]</p>
+<p>检索值<br>![[Pasted image 20201212144040.png]]<br>![[Pasted image 20201212144047.png]]</p>
+<p>添加新的键和值<br>![[Pasted image 20201212144112.png]]<br>![[Pasted image 20201212144120.png]]<br>![[Pasted image 20201212144156.png]]<br>例如, 假设只有键 1 和 100 存在, 当插入一个值到第 50 个键的位置时, 将导致原来位于 100 的键的索引变成 101</p>
+<p>添加到末尾<br>![[Pasted image 20201212144959.png]]</p>
+<p>删除键和值<br>![[Pasted image 20201212145026.png]]<br>范围删除键和值<br>![[Pasted image 20201212145305.png]]<br>删除末尾的，并返回值<br>![[Pasted image 20201212145348.png]]<br>删除从指定位置开始范围的键和值<br>![[Pasted image 20201212145457.png]]</p>
+<h1 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h1><h2 id="方括号"><a href="#方括号" class="headerlink" title="方括号"></a>方括号</h2><p>通常代表有可选的参数<br>查看AHK版本信息：MsgBox, %A_AhkVersion%<br>使用同一风格的缩进来规范代码</p>
+<h2 id="如何在不退出脚本的情况下停止重复的动作"><a href="#如何在不退出脚本的情况下停止重复的动作" class="headerlink" title="如何在不退出脚本的情况下停止重复的动作?"></a>如何在不退出脚本的情况下停止重复的动作?</h2><p>![[Pasted image 20201212152200.png]]</p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/12/18/introduce/" rel="prev" title="introduce">
+      <i class="fa fa-chevron-left"></i> introduce
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2020/12/18/%E6%8B%89%E7%89%87/%E9%93%B6%E7%BF%BC%E6%9D%80%E6%89%8B%202049/" rel="next" title="">
+       <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC%E4%B8%80%E4%B8%AA%E8%84%9A%E6%9C%AC"><span class="nav-number">1.</span> <span class="nav-text">第一个脚本</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%BF%AB%E6%8D%B7%E9%94%AE-amp-%E7%83%AD%E5%AD%97%E4%B8%B2"><span class="nav-number">2.</span> <span class="nav-text">快捷键&amp;热字串</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%89%B9%E6%AE%8A%E9%94%AE%E5%92%8C%E7%AC%A6%E5%8F%B7"><span class="nav-number">2.1.</span> <span class="nav-text">特殊键和符号</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AA%97%E5%8F%A3%E7%89%B9%E5%AE%9A%E7%9A%84%E7%83%AD%E9%94%AE-%E7%83%AD%E5%AD%97%E4%B8%B2"><span class="nav-number">2.2.</span> <span class="nav-text">窗口特定的热键&#x2F;热字串</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%91%E9%80%81%E6%8C%89%E9%94%AE"><span class="nav-number">2.3.</span> <span class="nav-text">发送按键</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%89%93%E5%BC%80%E7%A8%8B%E5%BA%8F-amp-%E7%BD%91%E9%A1%B5"><span class="nav-number">3.</span> <span class="nav-text">打开程序&amp;网页</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%91%BD%E4%BB%A4%E5%92%8C%E5%87%BD%E6%95%B0"><span class="nav-number">4.</span> <span class="nav-text">命令和函数</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%91%BD%E4%BB%A4"><span class="nav-number">4.1.</span> <span class="nav-text">命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%87%BD%E6%95%B0"><span class="nav-number">4.2.</span> <span class="nav-text">函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81%E5%9D%97"><span class="nav-number">4.3.</span> <span class="nav-text">代码块</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8F%98%E9%87%8F"><span class="nav-number">5.</span> <span class="nav-text">变量</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AF%B9%E8%B1%A1"><span class="nav-number">6.</span> <span class="nav-text">对象</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%85%B6%E4%BB%96"><span class="nav-number">7.</span> <span class="nav-text">其他</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%96%B9%E6%8B%AC%E5%8F%B7"><span class="nav-number">7.1.</span> <span class="nav-text">方括号</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E5%9C%A8%E4%B8%8D%E9%80%80%E5%87%BA%E8%84%9A%E6%9C%AC%E7%9A%84%E6%83%85%E5%86%B5%E4%B8%8B%E5%81%9C%E6%AD%A2%E9%87%8D%E5%A4%8D%E7%9A%84%E5%8A%A8%E4%BD%9C"><span class="nav-number">7.2.</span> <span class="nav-text">如何在不退出脚本的情况下停止重复的动作?</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Zeal Bill</p>
+  <div class="site-description" itemprop="description">时间是星星的眼睛，望穿我的困惑。</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives">
+          <span class="site-state-item-count">14</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Zeal Bill</span>
+</div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>
